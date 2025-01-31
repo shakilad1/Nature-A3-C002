@@ -17,19 +17,40 @@
   font-weight: 400;
   font-style: normal;
 }
+@keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px); 
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0); 
+        }
+      }
+
+      @keyframes colorChange {
+        0% { color: #3b82f6; } 
+        50% { color: #ec4899; } 
+        100% { color: #22c55e; } 
+      }
+
+      .animated-heading {
+        animation: fadeInUp 1s ease-in-out, colorChange 2s linear infinite alternate; 
+      }
+
 
 </style>
 </head>
 <body class="sora-font">
-    <header  class=" max-w-[1600px] mx-auto  px-4 lg:px-36" style="background: linear-gradient(180.00deg, rgb(255, 255, 255),rgb(239, 235, 227) 100%);" >
-<nav>
-    <div class="navbar ">
-        <div class="navbar-start w-full justify-between flex-row-reverse">
-          <div class="dropdown">
-            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+    <header  class=" max-w-[1600px] mx-auto  md:px-16   lg:px-28" style="background: linear-gradient(180.00deg, rgb(255, 255, 255),rgb(239, 235, 227) 100%);" >
+<nav class="pb-40 pt-4">
+    <div class="navbar border-b border-[#179800]  lg:border-hidden md:border-hidden ">
+        <div class="navbar-start w-full justify-between gap-8 flex-row-reverse  ">
+          <div class="dropdown -left-8">
+            <div tabindex="0" role="button" class="btn btn-ghost pr-4 md:hidden lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
+                class=" h-8` w-8 "
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor">
@@ -42,32 +63,100 @@
             </div>
             <ul
               tabindex="0"
-              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-              <li><a>Item 1</a></li>
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-50 p-2 shadow">
+              <li><a>Product</a></li>
               <li>
-                <a>Parent</a>
-                
+                <a>Services</a>
               </li>
-              <li><a>Item 3</a></li>
+              <li><a>Contact Us</a></li>
             </ul>
           </div>
-          <img class=" " src="c2-assets/logo-header.png" alt="">
-        </div>
-        <div class="navbar-center hidden lg:flex">
-          <ul class="menu menu-horizontal px-1">
-            <li><a>Item 1</a></li>
-           
-            <li><a>Item 3</a></li>
+          <div class="w-full">
+          <img class="lg:hidden  pl-6" src="c2-assets/Group.png" alt="">
+          <img class=" hidden lg:inline-flex " src="c2-assets/logo-header.png" alt="">
+          </div>
+        
+       
+        <div class="navbar-center absolute hidden md:flex lg: lg:flex md:pr-4 ">
+          <ul class="menu menu-horizontal md:text-base lg:text-xl ">
+            <li><a>Product</a></li>
+            <li><a>Services</a></li>
+            <li><a>Contact Us</a></li>
           </ul>
         </div>
-        <div class="navbar-end hidden lg:inline-flex">
-          <a class=" btn  ">Button</a>
+    </div>
+        <div class="navbar-end hidden  md:inline-flex lg:inline-flex md:gap-2 lg:gap-4 md:pl-4 lg:pl-8">
+        
+           
+            <img src="c2-assets/Frame 6.png" alt="">
+            <img src="c2-assets/Cart.png" alt="">
+          <a class=" btn md:px-4 md:py-2 lg:px-7 lg:py-2 border md:text-base lg:text-xl border-[#179800] ">Login</a>
+          <a class=" btn md:px-4 md:py-2 lg:px-10 lg:py-2   md:text-base lg:text-xl  text-white bg-[#179800] ">Register</a>
         </div>
+       
       </div>
 </nav>
+<!-- banner part -->
+ <div class="text-center space-y-5">
+    <h1 class=" lg:leading-normal text-3xl md:text-4xl lg:text-5xl font-semibold">Freshness <span class="text-[#179800]">You Can <br>
+        Count</span>  On, Prices You’ll Love!</h1>
+    <p class=" text-sm md:text-base lg:text-xl">Shop your daily essentials at unbeatable prices. From fresh produce to pantry <br> staples, we’ve got you covered every day!</p>
+    <div class="inline-flex justify-items-center">
+        <img src="c2-assets/hero-vegetables.png" alt="">
+    </div>
+ </div>
+ <h1 class="animated-heading text-4xl font-bold text-center md:text-5xl lg:text-6xl">
+    Welcome to nature's platter
+</h1>
     </header>
-    <main>
-
+    <main >
+        <!-- Services -->
+      <section class=" max-w-[1600px] mx-auto py-10    md:px-16 md:py-24 lg:px-28  lg:py-32"> 
+        <div>
+            <h3 class=" font-semibold text-[#179800] text-2xl md:text-3xl lg:text-4xl mx-4   mb-4 lg:mb-10">Services</h3>
+        </div>
+        <div class="   lg:grid lg:grid-cols-3 md:grid md:grid-cols-3 mx-4 lg:gap-6 " >
+            <!-- card-1 -->
+            <div class=" card  bg-[#EFEBE3]   pt-6 md:pt-10 lg:pt-14  rounded-2xl mb-4 ">
+                <div class=" mx-auto bg-white rounded-full p-5 "  >
+                  <img 
+                    src="c2-assets/service.png"
+                    alt="" />
+                </div>
+                <div class="card-body lg:gap-5 text-center">
+                  <h4 class=" text-base font-semibold md:text-xl lg:text-2xl" >24/7 Services </h4>
+                  <p class="text-sm md:text-base lg:text-xl">We provide services for 24 hours daily.So that anyone can get fresh and healthy organic vegetables within there reach.</p>
+                  
+                </div>
+              </div>
+              <!-- card-2 -->
+            <div class=" card  bg-[#EFEBE3]   pt-6 md:pt-10 lg:pt-14  rounded-2xl mb-4 ">
+                <div class=" mx-auto bg-white rounded-full p-5 "  >
+                    <img 
+                      src="c2-assets/delivery.png"
+                      alt="" />
+                  </div>
+                  <div class="card-body lg:gap-5 text-center">
+                    <h4 class=" text-base font-semibold md:text-xl lg:text-2xl" >Fast Delivery </h4>
+                    <p class="text-sm md:text-base lg:text-xl">We deliver all over Bangladesh.We have our own vehicle to provide dour to dour delivery within the day inside city and next day outside the city</p>
+                    
+                  </div>
+              </div>
+              <!-- card-3 -->
+            <div class=" card  bg-[#EFEBE3]   pt-6 md:pt-10 lg:pt-14  rounded-2xl mb-4 ">
+                <div class=" mx-auto bg-white rounded-full p-5 "  >
+                    <img 
+                      src="c2-assets/healthy.png"
+                      alt="" />
+                  </div>
+                  <div class="card-body lg:gap-5 text-center">
+                    <h4 class=" text-base font-semibold md:text-xl lg:text-2xl" >Healthy Products </h4>
+                    <p class="text-sm md:text-base lg:text-xl">We sell fresh organic goods.We have BSTI certifications for our organic vegetables.</p>
+                    
+                  </div>
+              </div>
+        </div>
+       </section>
     </main>
     <footer>
 
